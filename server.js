@@ -6,11 +6,15 @@ const cors = require('cors');
 // Create an instance of express
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://loquacious-sunburst-c7727c.netlify.app/',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+}));
 
 // Connecting MongoDB
 mongoose
-    .connect('mongodb://localhost:27017/mern-app')
+    .connect('mongodb+srv://jaiprabakar5:Dt8rG9n5TTFjwHtj@cluster0.dhcpq.mongodb.net/')
     .then(() => {
         console.log('DB Connected!');
     })
