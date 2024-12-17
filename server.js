@@ -14,7 +14,7 @@ app.use(cors({
 
 // Connecting MongoDB
 mongoose
-    .connect('mongodb+srv://jaiprabakar5:Dt8rG9n5TTFjwHtj@cluster0.dhcpq.mongodb.net/')
+    .connect('mongodb://localhost:27017/')
     .then(() => {
         console.log('DB Connected!');
     })
